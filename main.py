@@ -1,8 +1,14 @@
-my_set={1,1,2,3,5,4,5,4,8,'yes','yes',1,2}
-print('set:',my_set)
-my_set.add(7)
-my_set.add('no')
-print('Modified set:',my_set, '+"7" and "no"')
-my_set.discard(2)
-print('Modified set:',my_set,'- "2"')
+list=[1,2,5,-6,-7,43,0,36,22]
+i=0
+n=[]
+while i < len(list):
+    if list[i] > 0:
+        n.append(list[i]) #n.append()
+        i += 1
+    elif list[i] == 0 or list[i] < 0:
+        pass
+        i += 1
+        continue
+print(n)
+
 
