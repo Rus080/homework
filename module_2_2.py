@@ -1,8 +1,8 @@
-print ('Введите первое число :')
+print('Введите первое число :')
 First = input()
-print ('Введите второе число :')
+print('Введите второе число :')
 second = input()
-print ('Введите третье число :')
+print('Введите третье число :')
 third = input()
 if First == second and second == third:
     print('Все числа равны между собой = 3')
