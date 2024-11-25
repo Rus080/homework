@@ -6,7 +6,9 @@ while i < len(my_list):
     if my_list[i] > 0:
         n.append(my_list[i])  # n.append()
         i += 1
-    elif my_list[i] == 0 or my_list[i] < 0:
+    if my_list[i] < 0:
+        break
+    elif my_list[i] == 0:
         pass
         i += 1
         continue
