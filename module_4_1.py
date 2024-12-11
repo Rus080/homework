@@ -1,6 +1,6 @@
 #Задача "А как делить?"
-from fake_math import fake_divide
-from true_math import true_divide
+from module_math_4_1.fake_math import fake_divide
+from module_math_4_1.true_math import true_divide
 
 
 result1 = fake_divide(69, 3)
