@@ -1,6 +1,7 @@
 # Задача "Developer - не только разработчик"
 
 
+
 class House:
     def __init__(self, name, number_of_floors):
         self.name = name
@@ -17,11 +18,26 @@ class House:
                 break
             print(n)
             n += 1
-            #print(self.name, 'поднимаемся на этаж', range(self.number_of_floors))
+
+
+# Задача "Магические здания"
+    def __len__(self):
+        return self.number_of_floors
+
+    def __str__(self): # - должен возвращать строку: "Название: <название>, кол-во этажей: <этажи>".
+        return f'Название: {self.name}, кол-во этажей: {self.number_of_floors}'
+        #return self.number_of_floors
 
 
 h1 = House('ЖК Горский', 18)
 h2 = House('Домик в деревне', 2)
-h1.go_to(6)
-h2.go_to(10)
+#h1.go_to(6)
+#h2.go_to(10)
 
+# __str__
+print(h1)
+print(h2)
+
+# __len__
+print(len(h1))
+print(len(h2))
