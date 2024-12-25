@@ -29,22 +29,22 @@ class House:
 
 # Задача "Нужно больше этажей"
     def __eq__(self, other):
-        return self.number_of_floors == other
+        return self.number_of_floors == other.number_of_floors
 
     def  __lt__(self, other):
-        return self.number_of_floors < other
+        return self.number_of_floors < other.number_of_floors
 
     def __le__(self, other):
-        return self.number_of_floors <= other
+        return self.number_of_floors <= other.number_of_floors
 
     def  __gt__(self, other):
-        return self.number_of_floors > other
+        return self.number_of_floors > other.number_of_floors
 
     def  __ge__(self, other):
-        return self.number_of_floors >= other
+        return self.number_of_floors >= other.number_of_floors
 
     def  __ne__(self, other):
-        return self.number_of_floors != other
+        return self.number_of_floors != other.number_of_floors
 
     def __add__(self, other):
         if not isinstance(other, int):
@@ -76,7 +76,7 @@ print(len(h1))
 print(len(h2))
 
 print(h1 == h2) # __eq__
-h1 = h1 + '10' # __add__
+h1 = h1 + 10 # __add__
 print(h1)
 
 h1 += 10 # __iadd__
