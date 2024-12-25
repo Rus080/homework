@@ -4,7 +4,7 @@
 class House:
     def __init__(self, name, number_of_floors):
         self.name = name
-        self.number_of_floors = number_of_floors
+        self.number_of_floors = int(number_of_floors)
 
     def go_to (self, new_floor):
         print(f'{self.name}, количество этажей в доме: {self.number_of_floors}')
@@ -47,12 +47,18 @@ class House:
         return self.number_of_floors != other
 
     def __add__(self, other):
+        if not isinstance(other, int):
+            raise ArithmeticError('Разные типы переменных')
         return House(self.name, self.number_of_floors + other)
 
     def __radd__(self, other):
+        if not isinstance(other, int):
+            raise ArithmeticError('Разные типы переменных')
         return House(self.name, self.number_of_floors + other)
 
     def __iadd__(self, other):
+        if not isinstance(other, int):
+            raise ArithmeticError('Разные типы переменных')
         return House(self.name, self.number_of_floors + other)
 
 
@@ -70,7 +76,7 @@ print(len(h1))
 print(len(h2))
 
 print(h1 == h2) # __eq__
-h1 = h1 + 10 # __add__
+h1 = h1 + '10' # __add__
 print(h1)
 
 h1 += 10 # __iadd__
